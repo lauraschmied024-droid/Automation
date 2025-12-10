@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CircuitBoard, Languages } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export function Navigation() {
-  const [language, setLanguage] = useState<'en' | 'de'>('en');
+  const { language, setLanguage } = useLanguage();
 
   return (
     <nav className="container mx-auto px-6 py-6">
